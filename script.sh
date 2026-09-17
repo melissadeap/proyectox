@@ -21,3 +21,12 @@ if [ "${#archivos_encontrados[@]}" -eq 0 ]; then
 	exit 0
 fi
 
+
+#PARTE 3 RESULTADOS
+for archivo in "${archivos_encontrados[@]}"
+do
+	frecuencia=$(grep -oF -- "$1" "$archivo" | wc -l)
+		
+	echo "Archivo: $archivo" 
+	echo "Frecuencia: $frecuencia" 
+done
