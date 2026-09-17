@@ -11,7 +11,7 @@ fi
 if [ ! -d "$2" ]; then
     echo "Error: '$2' no existe o no es un directorio válido."
     exit 1
-
+fi
 
 #PARTE 2 BUSCAR
 mapfile -t archivos_encontrados < <(grep -rllF -- "$1" "$2")
